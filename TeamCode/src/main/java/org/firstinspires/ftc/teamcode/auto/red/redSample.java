@@ -21,6 +21,15 @@ public class redSample extends GreenLinearOpMode {
     public void initialize() {
 
         addDrivetrain();
+        addClawArm();
+        addHang();
+        addIntakeWrist();
+        addClawArm();
+        addClawWrist();
+        addHorizontalSlides();
+        addIntakeColorSensor();
+        addOuttakeClaw();
+        addVertSlides();
 
         SampleMecanumDrive drive = new SampleMecanumDrive(hardwareMap);
 
@@ -28,7 +37,7 @@ public class redSample extends GreenLinearOpMode {
 
         drive.setPoseEstimate(startPose);
 
-        TrajectorySequence closeRed = drive.trajectorySequenceBuilder(startPose)
+        closeRed = drive.trajectorySequenceBuilder(startPose)
 
                 // PRELOAD
 
